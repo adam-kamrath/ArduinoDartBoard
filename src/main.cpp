@@ -1,15 +1,21 @@
 #include <Arduino.h>
+#include <ArrayList.h>
 #include "player.h"
 
-#define RESET 2
-Player player1;
 bool gameOver = false;
+
+ArrayList<Player*> players; 
 
 //Test Comment
 void setup() {
   Serial.begin(9600);
   Serial.println("NEW GAME OF 301");
-  player1.score = 301;
+  Serial.println("Number of players?");
+  while(!Serial.available());
+  int numberOfPlayers = Serial.parseInt();
+  for (int i =0; i < numberOfPlayers; i++) {
+    
+  }
 }
 
 void loop() {
