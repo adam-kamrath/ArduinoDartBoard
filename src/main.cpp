@@ -15,11 +15,11 @@ uint8_t getHit(uint8_t pin, uint8_t score1, uint8_t score2, uint8_t score3, uint
   if (voltage > 4.9) {
     return 0;
   }
-  if (0.1 < voltage && voltage < 0.6) {
+  if (0.1 < voltage && voltage < 0.75) {
     testHitScore = score1;
     return score1;
   }
-  if (0.7 < voltage && voltage < 1.2) {
+  if (0.8 < voltage && voltage < 1.2) {
     testHitScore = score2;
     return score2;
   }
@@ -39,11 +39,11 @@ uint8_t getHit(uint8_t pin, uint8_t score1, uint8_t score2, uint8_t score3, uint
     testHitScore = score6;
     return score6;
   }
-  if (4.4 < voltage && voltage < 4.5) {
+  if (4.4 < voltage && voltage < 4.6) {
     testHitScore = score7;
     return score7;
   }
-  if (4.6 < voltage && voltage < 4.85) {
+  if (4.65 < voltage && voltage < 4.85) {
     testHitScore = score8;
     return score8;
   }
